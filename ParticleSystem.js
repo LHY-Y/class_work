@@ -1,5 +1,3 @@
-//ParticleSystem
-
 class ParticleSystem {
     constructor(position) {
         this.origin = position.copy();
@@ -19,5 +17,11 @@ class ParticleSystem {
     }
   }       
     }
+
+    applyForce(force) {
+    for (let i = 0; i < this.particles.length; i++) {
+    this.particles[i].applyForce(force);
+  }
+}
 
 }
